@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Simple ToDo List App</title>
+	<link rel="stylesheet" href="styles/siimple.min.css">
+	<style>
+		body{
+			margin-top: 80px;
+		}
+		li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body class="grid">
+		<h1>To-Do List</h1>
+		
+		<!-- Add Task -->
+		<form  method="POST" data-bind="submit: addTask">
+		<input class="form-input form-auto" type="text" data-bind="value: taskText" placeholder="Enter a Task">
+		<input class="btn btn-outline" type="submit" value="Add Task">
+		</form>
+		
+		<!-- Displaying Tasks -->
+		<h2 data-bind="visible: taskList().length > 0">Tasks :</h2>
+		<ol class="table table-stripped" data-bind="foreach: taskList">
+			<li> 
+				 <input type="checkbox" data-bind="checked: isDone"> 
+				 <input class="form-input form-auto" type="text" data-bind="value: task,disable: isDone"> 
+				 <button class="btn btn-outline" data-bind="click: $parent.removeTask">Delete</button> 
+			</li>
+		</ol>
+		<h3 data-bind="visible: taskList().length < 1">No Tasks Added.Add Some Tasks.</h3>
+	
+		<!-- Scripts Start Here -->
+		<script type='text/javascript' src='scripts/knockout-3.4.0.js'></script>
+		<script type="text/javascript" src="scripts/todo.js"></script>
+</body>
+</html>
