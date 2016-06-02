@@ -12,7 +12,9 @@ This has basic functions-
 
 You can extend it with even more functinality and features with a back-end also.Feel free to do so.
 
-The basic styles applied to this are by using siimple css framework.
+The basic styles applied to this are by using siimple css framework(http://siimple.juanes.xyz/).
 
-This is just developed to as a I learned KnockoutJS and practice some basics.
+I developed this as I was learning KnockoutJs.
+
+http://knockoutjs.com/
 
